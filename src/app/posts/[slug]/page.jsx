@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './singlePage.module.css';
-import Menu from '../../../components/Menu/menu';
+import Menu from '../../../components/Menu/Menu';
 import Image from 'next/image';
 import Comments from '../../../components/comments/Comments';
 import DeletePostButton from '../../../components/deletePost/DeletePostButton'; // client component

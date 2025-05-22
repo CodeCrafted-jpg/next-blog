@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './blog.module.css'
 import CardList from '../../components/cardList/cardList'
-import Menu from '../../components/Menu/menu'
+import Menu from '../../components/Menu/Menu'
 const BlogPage = ({searchParams}) => {
   const page=parseInt(searchParams.page)|| 1;
   const {cat}=searchParams
