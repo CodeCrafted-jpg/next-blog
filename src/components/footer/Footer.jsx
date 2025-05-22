@@ -12,18 +12,18 @@ const Footer = () => {
           <Image src="/logo.png" alt='' width={50} height={50} />
           <h1 className={styles.logoText}>My Blog</h1>
         </div>
-   <p className={styles.desc}> My Blog is a modern blog platform where users can write, publish, and manage
-  posts with ease. Whether you&apos;re a developer,
-  writer, or storyteller, My Blog gives you the tools to express your
-  ideas through a clean and responsive interface. </p>
-          <div className={styles.incons}>
-            <Image src='/facebook.png'  alt='' width={18} height={18}/>
-             <Image src='/instagram.png'  alt='' width={18} height={18}/>
-              <Image src='/tiktok.png'  alt='' width={18} height={18}/>
-              <Image src='/youtube.png'  alt='' width={18} height={18}/>
+        <p className={styles.desc}> My Blog is a modern blog platform where users can write, publish, and manage
+          posts with ease. Whether you&apos;re a developer,
+          writer, or storyteller, My Blog gives you the tools to express your
+          ideas through a clean and responsive interface. </p>
+        <div className={styles.incons}>
+          <Image src='/facebook.png' alt='' width={18} height={18} />
+          <Image src='/instagram.png' alt='' width={18} height={18} />
+          <Image src='/tiktok.png' alt='' width={18} height={18} />
+          <Image src='/youtube.png' alt='' width={18} height={18} />
 
-              
-          </div>
+
+        </div>
 
       </div>
       <div className={styles.link}>
@@ -40,12 +40,12 @@ const Footer = () => {
           <Link href='/'> Fashion </Link>
           <Link href='/'>Food</Link>
           <Link href="/">Travel</Link>
-           <Link href="/">Coding</Link>
+          <Link href="/">Coding</Link>
         </div>
         <div className={styles.list}>
           <span>Social</span>
           <Link href='/'>Facebook</Link>
-           <Link href='/'>Instagram</Link>
+          <Link href='/'>Instagram</Link>
           <Link href='/'>Tiktok</Link>
           <Link href='/'>Youtube</Link>
         </div>
