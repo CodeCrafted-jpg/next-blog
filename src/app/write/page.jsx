@@ -6,7 +6,10 @@ import { useState, useEffect } from "react";
 import "react-quill/dist/quill.bubble.css";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+
+// Dynamically import ReactQuill to prevent SSR errors
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const WritePage = () => {
   const { status } = useSession();
@@ -55,6 +58,7 @@ const WritePage = () => {
 
   if (status === "unauthenticated") {
     router.push("/");
+    return null;
   }
 
   const slugify = (str) =>
@@ -76,7 +80,7 @@ const WritePage = () => {
         catSlug: catSlug || "style",
       }),
     });
-   console.log(media)
+
     if (res.status === 200) {
       const data = await res.json();
       router.push(`/posts/${data.slug}`);
