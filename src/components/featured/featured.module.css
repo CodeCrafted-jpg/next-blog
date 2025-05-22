@@ -1,0 +1,114 @@
+.container {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+ 
+}
+.title .b{
+  font-weight: 700;
+}
+.post {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Better layout on smaller screens */
+}
+
+.imageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+  min-width: 280px;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.postTitle {
+  font-size: 36px;
+  font-weight: 600;
+  
+}
+
+.postDesc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--softTextColor, #555);
+}
+
+.button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0070f3;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: #0059c1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .imageContainer {
+    display: none; /* hides image on tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .post {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .postTitle {
+    font-size: 28px;
+  }
+
+  .postDesc {
+    font-size: 16px;
+  }
+}
