@@ -12,10 +12,10 @@ const Footer = () => {
           <Image src="/logo.png" alt='' width={50} height={50} />
           <h1 className={styles.logoText}>My Blog</h1>
         </div>
-        <p className={styles.desc}> My Blog is a modern blog platform where users can write, publish, and manage
-          posts with ease. Whether you're a developer,
-          writer, or storyteller,My Blog gives you the tools to express your
-          ideas through a clean and responsive interface. </p>
+   <p className={styles.desc}> My Blog is a modern blog platform where users can write, publish, and manage
+  posts with ease. Whether you&apos;re a developer,
+  writer, or storyteller, My Blog gives you the tools to express your
+  ideas through a clean and responsive interface. </p>
           <div className={styles.incons}>
             <Image src='/facebook.png'  alt='' width={18} height={18}/>
              <Image src='/instagram.png'  alt='' width={18} height={18}/>
