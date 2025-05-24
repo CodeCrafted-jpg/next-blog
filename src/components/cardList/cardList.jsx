@@ -15,7 +15,7 @@ const CardList = async ({ page, cat, customFetcher = null, title = "Recent Posts
   const fetcher = customFetcher || defaultFetcher;
   const { posts, count } = await fetcher(page, cat);
 
-  console.log("CardList received posts:", posts); // Add this to debug
+  // console.log("CardList received posts:", posts);
 
   const POST_PER_PAGE = 2;
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
