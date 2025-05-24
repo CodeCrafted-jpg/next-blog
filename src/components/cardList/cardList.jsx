@@ -3,10 +3,12 @@ import styles from './card.module.css'
 import Pagination from '../pagnation/pagination'
 import Card from '../card/Card'
 
+const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+
 // Default fetcher for public posts
 const defaultFetcher = async (page, cat) => {
-  const res = await fetch(`http://localhost:3000/api/post?page=${page}&cat=${cat || ''}`, {
-    cache: 'no-store'
+  const res = await fetch(`${baseUrl}/api/post?page=${page}&cat=${cat || ''}`, {
+      cache: 'no-store'
   });
   return res.json();
 };
