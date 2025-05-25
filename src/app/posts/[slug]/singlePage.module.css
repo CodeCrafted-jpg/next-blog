@@ -24,11 +24,16 @@
   height: 50px;
   position: relative;
   margin-top: 30px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .avatar {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
 
 .userTextContainer {
@@ -48,15 +53,22 @@
   flex: 1;
   height: 350px;
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 12px;
 }
 
 .content {
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;  /* allows wrapping on smaller screens */
 }
 
 .post {
@@ -70,6 +82,7 @@
   margin-bottom: 20px;
 }
 
+/* Font sizes for various screen widths */
 @media screen and (max-width: 1536px) {
   .title {
     font-size: 54px;
@@ -80,20 +93,35 @@
     font-size: 48px;
   }
 }
+
+/* Remove hiding of imageContainer at 1024px */
+/* Adjust imageContainer height for smaller screens */
 @media screen and (max-width: 1024px) {
   .imageContainer {
-    display: none;
+    height: 250px;
   }
 }
+
 @media screen and (max-width: 640px) {
   .title {
     font-size: 36px;
   }
 
-  .description p{
+  .description p {
     font-size: 18px;
   }
+
+  /* Stack content vertically on mobile */
+  .content {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    height: 200px;
+    margin-bottom: 20px;
+  }
 }
+
 .titleRow {
   display: flex;
   align-items: center;

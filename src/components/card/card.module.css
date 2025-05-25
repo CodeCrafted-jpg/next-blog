@@ -67,22 +67,29 @@
   border-color: #b00000;
 }
 
-/* Responsive Behavior */
-@media screen and (max-width: 1280px) {
-  .imageContainer {
-    display: none;
+/* Medium screens (tablets and below) */
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
   }
 
-  .container {
-    justify-content: center;
-    text-align: center;
+  .imageContainer {
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
   }
 
   .textContainer {
     align-items: center;
+    width: 100%;
+    max-width: 500px;
   }
 }
 
+/* Small screens (phones) */
 @media screen and (max-width: 640px) {
   .desc {
     font-size: 16px;
@@ -94,5 +101,18 @@
 
   .link {
     font-size: 14px;
+  }
+
+  .imageContainer {
+    height: 200px;
+  }
+
+  .container {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .textContainer {
+    gap: 15px;
   }
 }
